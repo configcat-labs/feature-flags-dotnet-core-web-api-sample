@@ -14,7 +14,7 @@ builder.Services.AddSingleton<IConfigCatClient>(sp =>
 {
     var client = new ConfigCatClient(options =>
     {
-        options.SdkKey = "0ZraCDvibUCFi7hFkQYgiA/f3IepXiqXEu5m32pgKQQxg"; 
+        options.SdkKey = "YOUR-SDK-KEY"; 
         options.PollingMode = PollingModes.AutoPoll(pollInterval: TimeSpan.FromSeconds(5));
     } );
 
