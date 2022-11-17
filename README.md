@@ -5,7 +5,7 @@ ConfigCat's user targeting system is used where the api behaves differently depe
 A feature flag is used in order to change the API behavior, where the segment `movement` is shown or hidden depending on the flag setting.
 
 ------------------------------------------------------------
-movement show
+### movement shown
 
 ```
 [
@@ -32,7 +32,7 @@ movement show
   }, ... ]
 ```
 
-Movement hidden
+### Movement hidden
 
 ```
  {
