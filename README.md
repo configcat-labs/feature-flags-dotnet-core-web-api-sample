@@ -1,10 +1,11 @@
 # feature-flags-dotnet-core-web-api-sample
 
 The app is showcasing the use of ConfigCat's feature flags in a ASP .NET Core Web API app.
-ConfigCat's user targeting system is used where the api behaves differently depending on user accounts type (users with premium tag or not).
-A feature flag is used in order to change the API behavior, where the segment `movement` is shown or hidden depending on the flag setting.
+ConfigCat's user targeting system is used where the API behaves differently depending on the user account type (does the user have a premium account or not) and the feature flag toggle (ON/OFF).
+This changes the API behavior, where the segment `movement` is shown or hidden.
 
 ------------------------------------------------------------
+
 ### movement shown
 
 ```
@@ -64,7 +65,7 @@ You can also explore other code samples for various languages, frameworks, and t
 Keep up with ConfigCat on [Twitter](https://twitter.com/configcat), [Facebook](https://www.facebook.com/configcat), [LinkedIn](https://www.linkedin.com/company/configcat/), and [GitHub](https://github.com/configcat).
 
 ## Author
-[Emil Kovacevic](https://github.com/emilkovacevic)
+[EMIL KOVAČEVIĆ](https://github.com/emilkovacevic)
 
 ## Contributions
 Contributions are welcome!
