@@ -6,7 +6,7 @@ This changes the API behavior, where the segment `movement` is shown or hidden.
 
 ------------------------------------------------------------
 
-### movement shown
+### Movement shown
 
 ```
 [
