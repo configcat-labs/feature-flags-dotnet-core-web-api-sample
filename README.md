@@ -47,8 +47,9 @@ Movement hidden
 
 ## Setup and Run
 
-- clone repository
-- use command "dotnet run" in a terminal OR run using and IDE
+- clone the repository
+- open the App folder in Visual Studio
+- use command "dotnet run" in the terminal OR run the app using the Visual Studio IDE
 - Connect to the ConfigCat dashboard to enable/disable the feature flag.
 
 ## Learn more
