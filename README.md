@@ -1,28 +1,60 @@
 # feature-flags-dotnet-core-web-api-sample
-An application showcasing the use of ConfigCat's feature flags in a .NET core web API app
 
+The app is showcasing the use of ConfigCat's feature flags in a ASP .NET Core Web API app.
+ConfigCat's user targeting system is used where the api behaves differently depending on user accounts type (users with premium tag or not).
+A feature flag is used in order to change the API behavior, where the segment `movement` is shown or hidden depending on the flag setting.
 
-Read.me template:
+------------------------------------------------------------
+movement show
 
-# Sample application name and/or blogpost title
+```
+[
+  {
+    "date": "2022-11-07T16:32:10.2919244+01:00",
+    "id": 1,
+    "carBrand": "Hyundai",
+    "stockPrice": 94,
+    "volume24h": 383345006,
+    "movement": [
+      {
+        "key": "change",
+        "value": "-9"
+      },
+      {
+        "key": "multiplier",
+        "value": "17"
+      },
+      {
+        "key": "spread",
+        "value": "61"
+      }
+    ]
+  }, ... ]
+```
 
-#### (Optional) In case the blog post is already published, please add: [Read the blog post here](https://configcat.com/blog/)
+Movement hidden
 
-A few words about the contents of the repository. Whats is this application about, what does it demonstrate? Add a backlink to https://configcat.com
+```
+ {
+    "date": "2022-11-07T16:13:41.8473912+01:00",
+    "id": 4,
+    "carBrand": "Abarth",
+    "stockPrice": 193,
+    "volume24h": 74446081,
+    "movement": null
+  }
+```
 
-## Build & Run
+## Setup and Run
 
-Instructions on how to build and run the application locally. A student or junior developer should be able to run the application.
-- Prerequisites
-- Steps, commands to run
+- clone repository
+- use command "dotnet run" in a terminal OR run using and IDE
+- Connect to the ConfigCat dashboard to enable/disable the feature flag.
 
 ## Learn more
 
-Useful links to technical resources.
-
-Example:
-- Next.js Documentation - learn about Next.js features and API.
-- Learn Next.js - an interactive Next.js tutorial.
+- ASP.NET [Documentation](https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-7.0) 
+- Learn more about ConfigCat's feature flags [here](https://configcat.com/featureflags/)
 
 [**ConfigCat**](https://configcat.com) also supports many other frameworks and languages. Check out the full list of supported SDKs [here](https://configcat.com/docs/sdk-reference/overview/).
 
@@ -31,7 +63,7 @@ You can also explore other code samples for various languages, frameworks, and t
 Keep up with ConfigCat on [Twitter](https://twitter.com/configcat), [Facebook](https://www.facebook.com/configcat), [LinkedIn](https://www.linkedin.com/company/configcat/), and [GitHub](https://github.com/configcat).
 
 ## Author
-[Your Name](https://github.com/your_name)
+[Emil Kovacevic](https://github.com/emilkovacevic)
 
 ## Contributions
 Contributions are welcome!
