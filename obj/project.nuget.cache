@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "yXOEgtFkG/k=",
+  "dgSpecHash": "vk2EY9HT9xs=",
   "success": true,
   "projectFilePath": "/Users/codedbychavez/repos/configcat/feature-flags-dotnet-core-web-api-sample/feature-flags-dotnet-core-web-api-sample.csproj",
   "expectedPackageFiles": [
+    "/Users/codedbychavez/.nuget/packages/configcat.client/10.0.0/configcat.client.10.0.0.nupkg.sha512",
+    "/Users/codedbychavez/.nuget/packages/configcat.extensions.hosting/10.0.0/configcat.extensions.hosting.10.0.0.nupkg.sha512",
     "/Users/codedbychavez/.nuget/packages/microsoft.aspnetcore.openapi/10.0.10/microsoft.aspnetcore.openapi.10.0.10.nupkg.sha512",
     "/Users/codedbychavez/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
   ],

@@ -2,6 +2,35 @@
   "version": 4,
   "targets": {
     "net10.0": {
+      "ConfigCat.Client/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/ConfigCat.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/ConfigCat.Client.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ConfigCat.Extensions.Hosting/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "ConfigCat.Client": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/ConfigCat.Extensions.Hosting.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/ConfigCat.Extensions.Hosting.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/10.0.10": {
         "type": "package",
         "dependencies": {
@@ -40,6 +69,54 @@
     }
   },
   "libraries": {
+    "ConfigCat.Client/10.0.0": {
+      "sha512": "wrRqVY1Px0g8wR1BxVNRHp53vL9DaMbERHHgfSejuNOeo1npaFmu33Q27xYlT1AILxPaoUrLF/LdYpEumMhvlw==",
+      "type": "package",
+      "path": "configcat.client/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "configcat.client.10.0.0.nupkg.sha512",
+        "configcat.client.nuspec",
+        "icon.png",
+        "lib/net462/ConfigCat.Client.dll",
+        "lib/net462/ConfigCat.Client.xml",
+        "lib/net6.0/ConfigCat.Client.dll",
+        "lib/net6.0/ConfigCat.Client.xml",
+        "lib/net8.0/ConfigCat.Client.dll",
+        "lib/net8.0/ConfigCat.Client.xml",
+        "lib/netstandard2.0/ConfigCat.Client.dll",
+        "lib/netstandard2.0/ConfigCat.Client.xml",
+        "lib/netstandard2.1/ConfigCat.Client.dll",
+        "lib/netstandard2.1/ConfigCat.Client.xml"
+      ]
+    },
+    "ConfigCat.Extensions.Hosting/10.0.0": {
+      "sha512": "SKpbB78Qqssle2vkqu1Vfs3uYRtGsI4TMuQ0HN0FXsoYyWkxEPgexxqRM+ZuEDahV5hz5ALD4xDiNvukMPmrXQ==",
+      "type": "package",
+      "path": "configcat.extensions.hosting/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "configcat.extensions.hosting.10.0.0.nupkg.sha512",
+        "configcat.extensions.hosting.nuspec",
+        "icon.png",
+        "lib/net10.0/ConfigCat.Extensions.Hosting.dll",
+        "lib/net10.0/ConfigCat.Extensions.Hosting.xml",
+        "lib/net462/ConfigCat.Extensions.Hosting.dll",
+        "lib/net462/ConfigCat.Extensions.Hosting.xml",
+        "lib/net8.0/ConfigCat.Extensions.Hosting.dll",
+        "lib/net8.0/ConfigCat.Extensions.Hosting.xml",
+        "lib/net9.0/ConfigCat.Extensions.Hosting.dll",
+        "lib/net9.0/ConfigCat.Extensions.Hosting.xml",
+        "lib/netstandard2.0/ConfigCat.Extensions.Hosting.dll",
+        "lib/netstandard2.0/ConfigCat.Extensions.Hosting.xml",
+        "lib/netstandard2.1/ConfigCat.Extensions.Hosting.dll",
+        "lib/netstandard2.1/ConfigCat.Extensions.Hosting.xml"
+      ]
+    },
     "Microsoft.AspNetCore.OpenApi/10.0.10": {
       "sha512": "d4Atx9IHq7JgX0F/h7Db+m9zAUzC+cKdI9k+OWnnyQIOUQtfvjIEuhvbjPigVMkAmPUgCbJ8Yp6M9ghUqHtJSQ==",
       "type": "package",
@@ -79,6 +156,8 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "ConfigCat.Client >= 10.0.0",
+      "ConfigCat.Extensions.Hosting >= 10.0.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.10"
     ]
   },
@@ -127,6 +206,14 @@
         "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
+          "ConfigCat.Client": {
+            "target": "Package",
+            "version": "[10.0.0, )"
+          },
+          "ConfigCat.Extensions.Hosting": {
+            "target": "Package",
+            "version": "[10.0.0, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[10.0.10, )"
