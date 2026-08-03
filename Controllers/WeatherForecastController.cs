@@ -18,10 +18,22 @@ public class WeatherForecastController(IConfigCatClient configCatClient) : Contr
     private readonly IConfigCatClient _configCatClient = configCatClient;
 
   [HttpGet(Name = "GetWeatherForecast")]
+
     public async Task<IEnumerable<WeatherForecast>> Get()
     {
+        // A unique user id is required when creating a ConfigCat User Object
+        var configCatUser = new ConfigCat.Client.User("user-id-123")
+        {
+            Email = "john@example.com",
+            Country = "United Kingdom",
+            Custom =
+            {
+                ["accountType"] = "premium", // The properties you add here should match the custom comparison attributes you added to the targeting rule on your flag
+            }
+        };
+
         // Fetch the flag's value
-        var isMyFeatureFlagEnabled = await _configCatClient.GetValueAsync("myFeatureFlag", false);
+        var isMyFeatureFlagEnabled = await _configCatClient.GetValueAsync("myFeatureFlag", false, configCatUser);
 
         if (!isMyFeatureFlagEnabled)
         {
