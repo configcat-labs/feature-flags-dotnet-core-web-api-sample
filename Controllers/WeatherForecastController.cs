@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
-using ConfigCat.Client; // Import the package
+using ConfigCat.Client; // Import types from the ConfigCat SDK's main namespace
 
 namespace feature_flags_dotnet_core_web_api_sample.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-// Add the ConfigCat client to the class constructor 
+// Inject the ConfigCat client via a constructor parameter
 // so we can use it within the class to control the API response
 public class WeatherForecastController(IConfigCatClient configCatClient) : ControllerBase
 {
@@ -14,39 +14,32 @@ public class WeatherForecastController(IConfigCatClient configCatClient) : Contr
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     ];
 
-    // Create a private instance of the ConfigCat client
-    private readonly IConfigCatClient _configCatClient = configCatClient;
-
-  [HttpGet(Name = "GetWeatherForecast")]
-
-    public async Task<IEnumerable<WeatherForecast>> Get()
+[HttpGet(Name = "GetWeatherForecast")]
+public async Task<IEnumerable<WeatherForecast>> Get()
+{
+    // A unique user id is required when creating a ConfigCat User Object
+    var configCatUser = new User("user-id-123")
     {
-        // A unique user id is required when creating a ConfigCat User Object
-        var configCatUser = new ConfigCat.Client.User("user-id-123")
+        Email = "john@example.com",
+        Country = "United Kingdom",
+        Custom =
         {
-            Email = "john@example.com",
-            Country = "United Kingdom",
-            Custom =
-            {
-                ["accountType"] = "premium", // The properties you add here should match the custom comparison attributes you added to the targeting rule on your flag
-            }
-        };
-
-        // Fetch the flag's value
-        var isMyFeatureFlagEnabled = await _configCatClient.GetValueAsync("myFeatureFlag", false, configCatUser);
-
-        if (!isMyFeatureFlagEnabled)
-        {
-            return []; // Return a blank list when the flag is off
+            ["accountType"] = "premium", // The dictionary keys you use here should match the custom comparison attributes you added to your flag's targeting rule on the ConfigCat Dashboard
         }
+    };
 
-        // Otherwise return the default list
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        {
-            Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
-    }
+    // Get the flag's latest value
+    var isMyFeatureFlagEnabled = await configCatClient.GetValueAsync("myFeatureFlag", false, configCatUser);
+
+    // When the flag is off, return only a limited number of items
+    var numDays = isMyFeatureFlagEnabled ? 5 : 2;
+
+    return Enumerable.Range(1, numDays).Select(index => new WeatherForecast
+    {
+        Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+        TemperatureC = Random.Shared.Next(-20, 55),
+        Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+    })
+    .ToArray();
+}
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("feature-flags-dotnet-core-web-api-sample")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25bee19782e75e11b559208adaf670bb0153a604")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6ea1b8030b0fb92911b4d00d1dddff96bc26c6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("feature-flags-dotnet-core-web-api-sample")]
 [assembly: System.Reflection.AssemblyTitleAttribute("feature-flags-dotnet-core-web-api-sample")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
