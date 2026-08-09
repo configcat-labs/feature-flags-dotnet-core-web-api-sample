@@ -43,7 +43,20 @@ the API behaves differently: it renders a full list of weather forecasts only to
 ### When the flag is off
 
 ```bash
-[]
+[
+  {
+    "date": "2026-08-03",
+    "temperatureC": 21,
+    "temperatureF": 69,
+    "summary": "Sweltering"
+  },
+  {
+    "date": "2026-08-04",
+    "temperatureC": 34,
+    "temperatureF": 93,
+    "summary": "Mild"
+  }
+]
 ```
 
 ## Setup and Run
@@ -67,11 +80,13 @@ dotnet run --launch-profile https
 
 You can also explore other code samples for various languages, frameworks, and topics here in the [ConfigCat labs](https://github.com/configcat-labs) on GitHub.
 
-Keep up with ConfigCat on [X](https://x.com/configcat), [Facebook](https://www.facebook.com/configcat), [LinkedIn](https://www.linkedin.com/company/configcat/), [GitHub](https://github.com/configcat), and the [News & Product Updates](https://configcat.com/docs/news/).
+Keep up with ConfigCat on [X](https://x.com/configcat), [Facebook](https://www.facebook.com/configcat), [LinkedIn](https://www.linkedin.com/company/configcat/), [GitHub](https://github.com/configcat), and the [News & Product Updates](https://configcat.com/docs/news/) page.
 
-## Author
+## Authors
+
 - [EMIL KOVAČEVIĆ](https://github.com/emilkovacevic)
 - [Chavez Harris](https://github.com/codedbychavez)
 
 ## Contributions
+
 Contributions are welcome!
