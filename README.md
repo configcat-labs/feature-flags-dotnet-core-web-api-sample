@@ -1,7 +1,7 @@
 # feature-flags-dotnet-core-web-api-sample
 
 This app shows an example of using ConfigCat's feature flags in an ASP.NET Core Web API app. With the help of user targeting 
-the API behaves differently, and renders a list of weather forecasts to users with a premium account type when toggled on.
+the API behaves differently: it renders a full list of weather forecasts only to users with a premium account type.
 
 ### When the flag is on
 
@@ -59,14 +59,15 @@ dotnet run --launch-profile https
 
 ## Learn more
 
-- ASP.NET [Documentation](https://learn.microsoft.com/en-us/aspnet/core/) 
+- ASP.NET [Documentation](https://learn.microsoft.com/en-us/aspnet/core/)
+- ConfigCat SDK for .NET [Reference](https://configcat.com/docs/sdk-reference/dotnet/generic-host/)
 - Learn more about ConfigCat's feature flags [here](https://configcat.com/featureflags/)
 
 [**ConfigCat**](https://configcat.com) also supports many other frameworks and languages. Check out the full list of supported SDKs [here](https://configcat.com/docs/sdk-reference/overview/).
 
 You can also explore other code samples for various languages, frameworks, and topics here in the [ConfigCat labs](https://github.com/configcat-labs) on GitHub.
 
-Keep up with ConfigCat on [X](https://x.com/configcat), [Facebook](https://www.facebook.com/configcat), [LinkedIn](https://www.linkedin.com/company/configcat/), and [GitHub](https://github.com/configcat).
+Keep up with ConfigCat on [X](https://x.com/configcat), [Facebook](https://www.facebook.com/configcat), [LinkedIn](https://www.linkedin.com/company/configcat/), [GitHub](https://github.com/configcat), and the [News & Product Updates](https://configcat.com/docs/news/).
 
 ## Author
 - [EMIL KOVAČEVIĆ](https://github.com/emilkovacevic)

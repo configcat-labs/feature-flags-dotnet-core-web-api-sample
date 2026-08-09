@@ -24,7 +24,9 @@ public async Task<IEnumerable<WeatherForecast>> Get()
         Country = "United Kingdom",
         Custom =
         {
-            ["accountType"] = "premium", // The dictionary keys you use here should match the custom comparison attributes you added to your flag's targeting rule on the ConfigCat Dashboard
+            // The dictionary keys you use here should match the custom comparison attributes
+            // you added to your flag's targeting rule on the ConfigCat Dashboard
+            ["accountType"] = "premium",
         }
     };
 

@@ -1,4 +1,4 @@
-namespace feature_flags_dotnet_core_web_api_sample;
+namespace feature_flags_dotnet_core_web_api_sample.Models;
 
 public class WeatherForecast
 {
