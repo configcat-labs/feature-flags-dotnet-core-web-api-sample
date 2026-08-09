@@ -1,7 +1,5 @@
 using ConfigCat.Client; // Import types from the ConfigCat SDK's main namespace
-
 using feature_flags_dotnet_core_web_api_sample.Models;
-
 using Microsoft.AspNetCore.Mvc;
 
 namespace feature_flags_dotnet_core_web_api_sample.Controllers;

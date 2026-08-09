@@ -1,6 +1,6 @@
 # feature-flags-dotnet-core-web-api-sample
 
-This app shows an example of using ConfigCat's feature flags in an ASP.NET Core Web API app. With the help of user targeting 
+This app shows an example of using ConfigCat's feature flags in ASP.NET Core Web API. With the help of user targeting 
 the API behaves differently: it renders a full list of weather forecasts only to users with a premium account type.
 
 ### When the flag is on
