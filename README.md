@@ -61,9 +61,9 @@ the API behaves differently: it renders a full list of weather forecasts only to
 
 ## Setup and Run
 
-1. Clone this repository
-2. Open the project in Visual Studio Code
-3. Add your ConfigCat SDK Key to `appsettings.json`
+1. Clone this repository.
+2. Open the project in Visual Studio Code.
+3. In your `appsettings.Development.json`, add a ConfigCat block and configure your SDK key. It is important to use different ConfigCat SDK keys for development and production.
 4. Launch the Web API in your browser with the following command:
 
 ```bash
