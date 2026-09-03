@@ -1,0 +1,6 @@
+@feature_flags_dotnet_core_web_api_sample_HostAddress = http://localhost:5285
+
+GET {{feature_flags_dotnet_core_web_api_sample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
